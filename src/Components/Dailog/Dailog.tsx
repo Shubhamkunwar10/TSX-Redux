@@ -34,7 +34,7 @@ const CustomDialog: React.FC<CustomDialogProps> = ({
           {children}
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => onClose()} color="primary">
+          <Button onClick={() => onClose()} variant='contained' color="primary">
             Close
           </Button>
         </DialogActions>
