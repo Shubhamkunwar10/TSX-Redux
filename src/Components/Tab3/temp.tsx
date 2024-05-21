@@ -5,6 +5,7 @@ import CustomDialog from '../Dailog/Dailog';
 import BuyCrypto from '../BuyCrypto';
 import { getColors } from '../../layout/Theme/themes';
 import Scrollbar from '../Scrollbar';
+import IcoSale from '../ICOSale';
 
 interface Crypto {
   id: number;
@@ -98,6 +99,7 @@ const CryptoTable: React.FC = () => {
         </Scrollbar>
 
       </section>
+      <IcoSale/>
     </Container>
   );
 };
