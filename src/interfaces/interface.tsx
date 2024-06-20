@@ -127,6 +127,11 @@ export interface CryptoData {
   price: number | string;
   marketCap: number | string;
 }
+export interface RoleData {
+  id?:string;
+  roleName?: string;
+  permissions?: string[];
+}
 
 //crypto comp
 export interface CryptoInfoProps{
