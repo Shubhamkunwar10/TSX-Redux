@@ -7,7 +7,7 @@ import Header from "./TopBar";
 import MiniDrawer from "./Navigation/index";
 
 import { Tabs } from '../DataTypes/enums';
-import MobileTabNavigation from '../Components/MobileTabNav/mobileVIew';
+// import MobileTabNavigation from '../Components/MobileTabNav/mobileVIew';
 import MetakulCollection from '../Components/Tab2/MetakulCollection';
 import DexPage from '../Components/Tab3/temp';
 import Tab4 from "../Components/Tab4/temp";
@@ -17,6 +17,7 @@ import OtherHousesOutlinedIcon from '@mui/icons-material/OtherHousesOutlined';
 import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
 import StoreOutlinedIcon from '@mui/icons-material/StoreOutlined';
 import ContactEmergencyOutlinedIcon from '@mui/icons-material/ContactEmergencyOutlined';
+import MobileTabNavigationTest from "../Components/MobileTabNav/NewMobileTab";
 
 export default function DashboardLayout() {
   const isNonMobile = useMediaQuery("(min-width: 766px)");
@@ -47,8 +48,9 @@ export default function DashboardLayout() {
         setIsSidebarOpen={handleSideBarState}
         navConfig={navConfig}
       />
+      
       <Container component="main" sx={{ flexGrow: 1, mt: 12, ml: "auto", mr: "auto" }}>
-        <MobileTabNavigation showOutlet={showOutlet} tabs={tabs} />
+        <MobileTabNavigationTest showOutlet={showOutlet} tabs={tabs} />
       </Container>
     </Box>
   );

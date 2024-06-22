@@ -6,11 +6,13 @@ import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 
 interface CustomDialogProps {
-  open: boolean;
+  open: boolean | null;
   onClose: () => void;
-  triggerButtonText: string;
+  triggerButtonText?: string;
   title: string;
   description: string;
+  buttonVariant?: any;
+  buttonColor?: any;
   children: ReactNode;
 }
 
@@ -21,12 +23,17 @@ const CustomDialog: React.FC<CustomDialogProps> = ({
   title,
   description,
   children,
+  buttonColor,
+  buttonVariant,
 }) => {
   return (
     <>
-      <Button variant="outlined" onClick={() => onClose()}>
+    {triggerButtonText && 
+      <Button variant={buttonVariant} color={buttonColor} onClick={() => onClose()}>
         {triggerButtonText}
       </Button>
+      }
+      {open && 
       <Dialog onClose={onClose} open={open}>
         <DialogTitle>{title}</DialogTitle>
         <DialogContent>
@@ -34,11 +41,12 @@ const CustomDialog: React.FC<CustomDialogProps> = ({
           {children}
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => onClose()} color="primary">
+          <Button onClick={() => onClose()} variant='contained' color="primary">
             Close
           </Button>
         </DialogActions>
       </Dialog>
+      }
     </>
   );
 };
