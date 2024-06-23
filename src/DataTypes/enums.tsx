@@ -24,6 +24,7 @@ export enum Pages {
   CREATE_ORDER = "/createOrder",
   SINGLE_BLOG = "/blogDetails/:id",
   Permissions = "/Permissions",
+  Javascript="/Javascript"
 }
 
 export enum HomePageInfo{

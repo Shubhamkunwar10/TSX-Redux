@@ -78,7 +78,16 @@ export const navConfig = [
     icon: <CalendarMonthOutlined />,
     to: "Career",
   },
-  
+  {
+    text: "Learn Code",
+    icon:null,
+    to: "",
+  },
+  {
+    text: "Javascript",
+    icon: <CalendarMonthOutlined />,
+    to: "Javascript",
+  },
 ];
 
 export default navConfig;

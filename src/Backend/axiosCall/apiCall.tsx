@@ -11,6 +11,7 @@ const Request = async (options: RequestOptions) => {
   try {
     // Construct the full request URL, prepending the API endpoint if necessary
     const fullUrl = `${options.url}`;
+console.log(fullUrl);
 
     // Make the HTTP request using axios
     const response = await axios({

@@ -15,6 +15,7 @@ import LaundryPage from "./pages/LaundryPage";
 import CreateOrder from "./pages/LaundryPage/CreateOrder";
 import SingleBlogDetails from "./Components/BlogDetails.tsx/SingleBlogDetails.tsx";
 import Permissions from "./pages/permission/index.tsx";
+import Javascript from "./pages/AllBlogs/Javscript/index.tsx";
 
 const Router: React.FC = () => {
   const token = useSelector(selectToken);
@@ -60,6 +61,10 @@ const Router: React.FC = () => {
         {
           path: Pages.SINGLE_BLOG,
           element: <SingleBlogDetails />,
+        },  
+        {
+          path: Pages.Javascript,
+          element: <Javascript />,
         },  
         {
           path: Pages.Permissions,
