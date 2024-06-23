@@ -34,7 +34,7 @@ const Tab1 = () => {
           </Stack>
       ) : (
         <>
-          <Marquee />
+          {/* <Marquee /> */}
           <Blogs />
         </>
       )}

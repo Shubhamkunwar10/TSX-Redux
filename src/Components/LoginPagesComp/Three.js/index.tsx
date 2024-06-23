@@ -5,13 +5,13 @@ import AddBlogForm from '../../Forms/AddBlogForm';
 import { useSelector } from 'react-redux';
 import { selectUserType } from '../../../redux/slices/authSlice';
 interface UserpageProps {}
-const Userpage: React.FC<UserpageProps> = () => {
+const ThreeJs: React.FC<UserpageProps> = () => {
   const scene = new THREE.Scene();
   const userType = useSelector(selectUserType);
 
   // Sizes
   const sizes = {
-    width: 400,
+    width: 768,
     height: 600,
   };
 
@@ -83,13 +83,12 @@ const Userpage: React.FC<UserpageProps> = () => {
   //   console.log(data)
   // };
   return (
-    <div>
-      {/* <a href="#" onClick={() => setBg(!bg)}>
+    <div className='flex flex-col justify-center'>
+      <a href="#" >
         <div ref={mount}></div>
-      </a> */}
-        <AddBlogForm userType={userType} formEvent={"ADD blog"}  />
+      </a>
     </div>
   );
 };
 
-export default Userpage;
+export default ThreeJs;
